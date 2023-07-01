@@ -50,9 +50,10 @@ button {
 
   cursor: pointer;
   transition: border-color 0.25s;
+  opacity: 0.5;
 }
 button:hover {
-  border-color: #646cff;
+  opacity: 1;
 }
 button:focus,
 button:focus-visible {

@@ -60,12 +60,17 @@ function App() {
                 className="flex justify-center items-center gap-2"
               >
                 <input
-                  className=""
                   type="checkbox"
                   checked={each.completed}
                   onChange={(e) => toggleTodo(each.id, e.target.checked)}
                 />
-                <p>{each.taskName}</p>
+                <p
+                  className={
+                    each.completed === false ? "text-red-700" : "text-green-500"
+                  }
+                >
+                  {each.taskName}
+                </p>
                 <button
                   className="bg-red-700 p-1 mb-2 flex-1"
                   onClick={() => deleteThis(each.id)}
